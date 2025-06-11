@@ -1,53 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="main-content">
-        {{-- <section class="section">
-          <div class="row ">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15">New Booking</h5>
-                          <h2 class="mb-3 font-18">258</h2>
-                          <p class="mb-0"><span class="col-green">10%</span> Increase</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/1.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="content">
+        <div class="py-4 px-3 px-md-4">
+
+            <div class="mb-3 mb-md-4 d-flex justify-content-between">
+                <div class="h3 mb-0">Dashboard</div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15"> Customers</h5>
-                          <h2 class="mb-3 font-18">1,287</h2>
-                          <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <img src="assets/img/banner/2.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
+
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="small p-3 px-md-4 mt-auto">
+            <div class="row justify-content-between">
+                <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+                    <ul class="list-dot list-inline mb-0">
+                        <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="#">FAQ</a></li>
+                        <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="#">Support</a></li>
+                        <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="#">Contact us</a></li>
+                    </ul>
                 </div>
-              </div>
+
+                <div class="col-lg text-center mb-3 mb-lg-0">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="gd-twitter-alt"></i></a></li>
+                        <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="gd-facebook"></i></a></li>
+                        <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="gd-github"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg text-center text-lg-right">
+                    &copy; 2025 Riuman International.
+                </div>
             </div>
-        </section> --}}
-      </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
 @endsection

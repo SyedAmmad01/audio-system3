@@ -2,77 +2,113 @@
 
 
                         @section('content')
-                            <div class="main-content">
-                                <section class="section">
-                                    <div class="section-body">
-                                        <div class="row">
-                                            <div class="col-12 col-md-12 col-lg-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h4>Audio Check</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <form id="get_audio" class="needs-validation" novalidate>
-                                                            <div class="row">
-                                                                <div class="col-lg-6">
-                                                                    <div class="form-group">
-                                                                        <label>Date</label>
-                                                                        <input type="date" class="form-control"
-                                                                            name="date_from" placeholder="Select Start Date"
-                                                                            required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <div class="form-group">
-                                                                        <label>Date</label>
-                                                                        <input type="date" class="form-control"
-                                                                            name="date_to" placeholder="Select End Date"
-                                                                            required>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                            <div class="content">
+                                <div class="py-4 px-3 px-md-4">
+                                    <div class="card mb-3 mb-md-4">
 
+                                        <div class="card-body">
+                                            <!-- Form -->
+                                            <div>
+                                                <form id="get_audio" class="needs-validation" novalidate>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for="date_from">Date From</label>
+                                                            <input type="date" class="form-control"
+                                                                id="date_from" name="date_from">
+                                                        </div>
+                                                        <div class="form-group col-12 col-md-6">
+                                                            <label for="date_from">Date From</label>
+                                                            <input type="date" class="form-control"
+                                                                id="date_to" name="date_to">
+                                                        </div>
                                                     </div>
-                                                    <div class="card-footer text-left">
-                                                        <button class="btn btn-primary mr-1" type="submit">Check</button>
-                                                    </div>
-                                                    </form>
-                                                </div>
+                                                    <button type="submit"
+                                                        class="btn btn-primary float-left">Check</button>
+                                                </form>
                                             </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12 col-md-12 col-lg-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <table class="table myDataTable" id="audio_table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">#</th>
-                                                                    <th scope="col">User ID</th>
-                                                                    <th scope="col">User Name</th>
-                                                                    <th scope="col">Date From</th>
-                                                                    <th scope="col">Date To</th>
-                                                                    <th scope="col">Recording</th>
-                                                                    <th scope="col">Extension</th>
-                                                                    <th scope="col">Audio Type</th>
-                                                                    <th scope="col">Action</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <!-- End Form -->
                                         </div>
                                     </div>
-                            </div>
 
 
-                            </section>
+                                </div>
+
+                                <div class="content">
+                                    <div class="py-4 px-3 px-md-4">
+                                        <div class="card mb-3 mb-md-4">
+
+                                            <div class="card-body">
+                                                <!-- Users -->
+                                                <div class="table-responsive-xl">
+                                                    {{-- <table class="table text-nowrap mb-0"> --}}
+                                                        <table class="table myDataTable" id="audio_table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">#</th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">User ID
+                                                                </th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">User Name
+                                                                </th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">
+                                                                    Date From</th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">Date To
+                                                                </th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">Recording
+                                                                </th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">Extension
+                                                                </th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">Audio Type
+                                                                </th>
+                                                                <th class="font-weight-semi-bold border-top-0 py-2">Action
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                                <!-- End Users -->
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <!-- Footer -->
+                                <footer class="small p-3 px-md-4 mt-auto">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+                                            <ul class="list-dot list-inline mb-0">
+                                                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a
+                                                        class="link-dark" href="#">FAQ</a></li>
+                                                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark"
+                                                        href="#">Support</a></li>
+                                                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark"
+                                                        href="#">Contact us</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg text-center mb-3 mb-lg-0">
+                                            <ul class="list-inline mb-0">
+                                                <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i
+                                                            class="gd-twitter-alt"></i></a></li>
+                                                <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i
+                                                            class="gd-facebook"></i></a></li>
+                                                <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i
+                                                            class="gd-github"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg text-left text-lg-right">
+                                            &copy; 2025 Riuman International.
+                                        </div>
+                                    </div>
+                                </footer>
+                                <!-- End Footer -->
                             </div>
                         @endsection
 

@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Otika - Admin Dashboard Template</title>
-  <!-- General CSS Files -->
-  <link rel="stylesheet" href="{{asset('assets')}}/css/app.min.css">
-  <link rel="stylesheet" href="{{asset('assets')}}/bundles/bootstrap-social/bootstrap-social.css">
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
-  <link rel="stylesheet" href="{{asset('assets')}}/css/components.css">
-  <!-- Custom style CSS -->
-  <link rel="stylesheet" href="{{asset('assets')}}/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='{{asset('assets')}}/img/favicon.ico' />
+    <!-- Title -->
+    <title>Login | Graindashboard UI Kit</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{asset('/img/favicon.ico')}}">
+
+    <!-- Template -->
+    <link rel="stylesheet" href="{{asset('/graindashboard/css/graindashboard.css')}}">
 </head>
 
-<body>
-  <div class="loader"></div>
-  <div id="app">
+<body class="">
 
-    @yield('content')
+    <main class="main">
+
+        @yield('content')
 
 
-  </div>
-  <!-- General JS Scripts -->
-  <script src="{{asset('assets')}}/js/app.min.js"></script>
-  <!-- JS Libraies -->
-  <!-- Page Specific JS File -->
-  <!-- Template JS File -->
-  <script src="{{asset('assets')}}/js/scripts.js"></script>
-  <!-- Custom JS File -->
-  <script src="{{asset('assets')}}/js/custom.js"></script>
+    </main>
+
+    <script src="{{asset('/graindashboard/js/graindashboard.js')}}"></script>
+    <script src="{{asset('/graindashboard/js/graindashboard.vendor.js')}}"></script>
 </body>
 
-
-<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 </html>
+

@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- index.html  21 Nov 2019 03:44:50 GMT -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Otika - Admin Dashboard Template</title>
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/app.min.css">
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/components.css">
-    <!-- Custom style CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='{{ asset('assets') }}/img/favicon.ico' />
+    <!-- Title -->
+    <title>Dashboard | Graindashboard UI Kit</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{asset('/img/favicon.ico')}}">
+
+
+    <!-- DEMO CHARTS -->
+    <link rel="stylesheet" href="{{asset('/demo/chartist.css')}}">
+    <link rel="stylesheet" href="{{asset('/demo/chartist-plugin-tooltip.css')}}">
+
+    <!-- Template -->
+    <link rel="stylesheet" href="{{asset('/graindashboard/css/graindashboard.css')}}">
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
 
 </head>
 
-<body>
-    <div class="loader"></div>
-    <div id="app">
-        <div class="main-wrapper main-wrapper-1">
-            <div class="navbar-bg"></div>
-            @include('components.navbar')
+<body class="has-sidebar has-fixed-sidebar-and-header">
+    <!-- Header -->
+    {{-- @include('components.navbar') --}}
+    @include('components.header')
+    <!-- End Header -->
+
+    <main class="main">
+        <!-- Sidebar Nav -->
+        @include('components.sidebar')
+        <!-- End Sidebar Nav -->
+
+        @yield('content')
+
+        {{-- @include('components.footer') --}}
+
+    </main>
 
 
+    <script src="{{asset('/graindashboard/js/graindashboard.js')}}"></script>
+    <script src="{{asset('/graindashboard/js/graindashboard.vendor.js')}}"></script>
 
-            @include('components.sidebar')
+    <!-- DEMO CHARTS -->
+    <script src="{{asset('/demo/resizeSensor.js')}}"></script>
+    <script src="{{asset('/demo/chartist.js')}}"></script>
+    <script src="{{asset('/demo/chartist-plugin-tooltip.js')}}"></script>
+    <script src="{{asset('/demo/gd.chartist-area.js')}}"></script>
+    <script src="{{asset('/demo/gd.chartist-bar.js')}}"></script>
+    <script src="{{asset('/demo/gd.chartist-donut.js')}}"></script>
 
-
-            @yield('content')
-
-            @include('components.footer')
-
-
-        </div>
-    </div>
-    <!-- General JS Scripts -->
-    <script src="{{ asset('assets') }}/js/app.min.js"></script>
-    <!-- JS Libraies -->
-    <script src="{{ asset('assets') }}/bundles/apexcharts/apexcharts.min.js"></script>
-    <!-- Page Specific JS File -->
-    <script src="{{ asset('assets') }}/js/page/index.js"></script>
-    <!-- Template JS File -->
-    <script src="{{ asset('assets') }}/js/scripts.js"></script>
-    <!-- Custom JS File -->
-    <script src="{{ asset('assets') }}/js/custom.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    {{-- <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> --}}
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
     @yield('page-scripts')
 
 
+    <script>
+        $.GDCore.components.GDChartistArea.init('.js-area-chart');
+        $.GDCore.components.GDChartistBar.init('.js-bar-chart');
+        $.GDCore.components.GDChartistDonut.init('.js-donut-chart');
+    </script>
+
+
+
 </body>
-
-
-<!-- index.html  21 Nov 2019 03:47:04 GMT -->
 
 </html>
