@@ -17,7 +17,7 @@
                                                                 id="date_from" name="date_from">
                                                         </div>
                                                         <div class="form-group col-12 col-md-6">
-                                                            <label for="date_from">Date From</label>
+                                                            <label for="date_to">Date To</label>
                                                             <input type="date" class="form-control"
                                                                 id="date_to" name="date_to">
                                                         </div>
